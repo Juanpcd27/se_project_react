@@ -1,0 +1,31 @@
+.modal__container-preview {
+  max-width: 343px;
+  width: 100%;
+  padding: 0;
+}
+
+.modal__image-preview {
+  width: 100%;
+  border-radius: 12px 12px 0px 0px;
+}
+
+.modal__close-preview {
+  margin-left: 310px;
+  margin-top: 10px;
+  width: 20px;
+  height: 20px;
+  background-image: url(../../images/closepreview.png) rgba(255, 255, 255, 1);
+}
+
+.modal__caption {
+  color: rgba(0, 0, 0, 1);
+  font-size: 20px;
+  line-height: 24px;
+  padding: 10px;
+  margin: 0;
+}
+
+.modal__weather {
+  margin: 0;
+  padding: 0px 0px 0px 10px;
+}
