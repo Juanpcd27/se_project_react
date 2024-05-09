@@ -13,20 +13,20 @@ function App() {
     type: "",
     temp: { F: 999 },
   });
-  const [isOpen, setIsOpen] = useState(false);
+  const [activeModal, setActiveModal] = useState("");
   const [selectedCard, setSelectedCard] = useState({});
 
   const handleCardClick = (card) => {
-    setIsOpen("preview");
+    setActiveModal("preview");
     setSelectedCard(card);
   };
 
   const openModal = () => {
-    setIsOpen(true);
+    setActiveModal("add-garment");
   };
 
   const closeModal = () => {
-    setIsOpen(false);
+    setActiveModal("");
   };
 
   useEffect(() => {
@@ -48,7 +48,7 @@ function App() {
       <ModalWithForm
         title="New garment"
         buttonText="Add garment"
-        isOpen={isOpen}
+        isOpen={activeModal === "add-garment"}
         closeModal={closeModal}
       >
         <label htmlFor="name" className="modal__label">
@@ -111,7 +111,11 @@ function App() {
           </label>
         </fieldset>
       </ModalWithForm>
-      <ItemModal isOpen={isOpen} card={selectedCard} closeModal={closeModal} />
+      <ItemModal
+        isOpen={activeModal === "preview"}
+        card={selectedCard}
+        closeModal={closeModal}
+      />
     </div>
   );
 }

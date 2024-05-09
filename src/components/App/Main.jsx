@@ -5,7 +5,7 @@ import ItemCard from "../Main/ItemCard";
 
 function Main({ weatherData, handleCardClick }) {
   return (
-    <main className="">
+    <main className="main">
       <WeatherCard weatherData={weatherData} />
       <section className="cards">
         <p className="cards__text">
