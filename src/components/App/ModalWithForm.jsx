@@ -10,7 +10,7 @@ function ModalWithForm({ children, title, buttonText, isOpen, closeModal }) {
           type="button"
         ></button>
         <h3 className="modal__title">{title}</h3>
-        <form className="modal__form" name="form-add-garment">
+        <form className="modal__form">
           {children}
           <button className="button__submit" type="submit">
             {buttonText}
