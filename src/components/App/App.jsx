@@ -12,7 +12,7 @@ import ToggleSwitch from "../ToggleSwitch/ToggleSwitch";
 import {
   CurrentTemperatureUnitContext,
   DummyComponent,
-} from "../contexts/CurrentTemperatureUnitContext";
+} from "../../contexts/CurrentTemperatureUnitContext";
 import AddItemModal from "../AddItemModal/AddItemModal";
 import Profile from "../Profile/Profile";
 import ItemCard from "../Main/ItemCard";

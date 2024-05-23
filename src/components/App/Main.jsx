@@ -5,7 +5,7 @@ import ItemCard from "../Main/ItemCard";
 import {
   CurrentTemperatureUnitContext,
   DummyComponent,
-} from "../contexts/CurrentTemperatureUnitContext";
+} from "../../contexts/CurrentTemperatureUnitContext";
 
 function Main({ weatherData, handleCardClick, clothingItems }) {
   return (
