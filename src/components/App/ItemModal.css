@@ -29,3 +29,16 @@
   margin: 0;
   padding: 0px 0px 0px 10px;
 }
+
+.modal__info {
+  display: flex;
+}
+
+.modal__delete {
+  color: red;
+  border: none;
+  background-color: white;
+  cursor: pointer;
+  margin-left: 170px;
+  margin-top: 5px;
+}

@@ -31,3 +31,13 @@
 .header__avatar {
   margin: 0;
 }
+
+.switch__container {
+  margin-left: auto;
+  display: flex;
+}
+
+.header__link {
+  text-decoration: none;
+  color: black;
+}

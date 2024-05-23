@@ -17,7 +17,7 @@ function WeatherCard({ weatherData }) {
       <p className="weather__text">{weatherData.temp.F}°F</p>
       <img
         className="weather__image"
-        src={weatherImage}
+        src={weatherImage} //weatherOption?.url}
         alt={`Card showing ${weatherOption?.day ? "day" : "night"}time ${
           weatherOption?.condition
         } weather`}
