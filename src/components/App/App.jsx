@@ -9,7 +9,10 @@ import ItemModal from "./ItemModal";
 import { getWeather, filterWeatherData } from "../../utils/weatherApi";
 import { coordinates, APIkey } from "../../utils/constants";
 import ToggleSwitch from "../ToggleSwitch/ToggleSwitch";
-import { CurrentTemperatureUnitContext } from "../contexts/CurrentTemperatureUnitContext";
+import {
+  CurrentTemperatureUnitContext,
+  DummyComponent,
+} from "../contexts/CurrentTemperatureUnitContext";
 import AddItemModal from "../AddItemModal/AddItemModal";
 import Profile from "../Profile/Profile";
 import ItemCard from "../Main/ItemCard";

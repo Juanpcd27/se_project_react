@@ -1,7 +1,10 @@
 import "./WeatherCard.css";
 import { weatherOptions } from "../../utils/constants";
 import weatherImage from "../../images/day/clear.png";
-import { CurrentTemperatureUnitContext } from "../contexts/CurrentTemperatureUnitContext";
+import {
+  CurrentTemperatureUnitContext,
+  DummyComponent,
+} from "../contexts/CurrentTemperatureUnitContext";
 
 function WeatherCard({ weatherData }) {
   const filteredOptions = weatherOptions.filter((option) => {
