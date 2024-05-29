@@ -18,8 +18,10 @@ export const filterWeatherData = (data) => {
   result.condition = data.weather[0].main.toLowerCase();
   result.isDay = isDay(data.sys, Date.now());
   result.weather = {
-    temp: { F: Math.round(data.main.temp) },
-    C: Math.round(((data.main.temp - 32) * 5) / 9),
+    temp: {
+      F: Math.round(data.main.temp),
+      C: Math.round(((data.main.temp - 32) * 5) / 9),
+    },
   };
   return result;
 };

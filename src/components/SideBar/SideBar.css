@@ -1,4 +1,16 @@
+.profile__sidebar {
+}
+
 .sidebar {
   display: flex;
   flex-direction: row;
+  width: 229px;
+  height: 56px;
+}
+
+.sidebar__username {
+  margin-left: 10px;
+  color: rgba(0, 0, 0, 1);
+  font-size: 20px;
+  line-height: 24.8px;
 }
