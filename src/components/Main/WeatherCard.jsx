@@ -7,19 +7,6 @@ import {
 } from "../../contexts/CurrentTemperatureUnitContext";
 
 function WeatherCard({ weatherData }) {
-  // const { currentTemperatureUnit } = useContext(CurrentTemperatureUnitContext);
-
-  // // const weatherType = useMemo(() => {
-  // //   const temp = weatherData?.filteredData?.[currentTemperatureUnit] || 999;
-  // //   if (temp > 86) {
-  // //     return "hot";
-  // //   } else if (temp >= 66 && temp < 86) {
-  // //     return "warm";
-  // //   } else if (temp <= 65) {
-  // //     return "cold";
-  // //   }
-  // // }, [weatherData]);
-
   const filteredOptions = weatherOptions.filter((option) => {
     return (
       option.day === weatherData.isDay &&
