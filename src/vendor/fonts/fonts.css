@@ -1,1 +1,16 @@
-@import url("https://fonts.cdnfonts.com/css/cabinet-grotesk");
+@font-face {
+  font-family: "Cabinet Grotesk";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("./CabinetGrotesk-Black.otf") format("otf"),
+    url("./CabinetGrotesk-Bold.otf") format("otf");
+}
+
+@font-face {
+  font-family: "Cabinet Grotesk";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("./CabinetGrotesk-Medium.otf") format("otf");
+}

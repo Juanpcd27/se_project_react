@@ -23,15 +23,23 @@
   line-height: 24px;
   padding: 10px;
   margin: 0;
+  font-family: "Cabinet Grotesk", Arial, sans-serif;
+  font-weight: 500;
 }
 
 .modal__weather {
   margin: 0;
   padding: 0px 0px 0px 10px;
+  font-family: "Cabinet Grotesk", Arial, sans-serif;
+  font-weight: 500;
+}
+
+.modal__footer {
 }
 
 .modal__info {
   display: flex;
+  justify-content: space-between;
 }
 
 .modal__delete {
@@ -39,6 +47,8 @@
   border: none;
   background-color: white;
   cursor: pointer;
-  margin-left: 170px;
   margin-top: 5px;
+  padding: 10px;
+  font-family: "Cabinet Grotesk", Arial, sans-serif;
+  font-weight: 500;
 }

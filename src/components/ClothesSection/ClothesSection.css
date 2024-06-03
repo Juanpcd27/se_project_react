@@ -1,11 +1,14 @@
 .clothes-info {
   display: flex;
   flex-direction: row;
-  margin-top: 10px;
+  margin-top: 4px;
 }
 
 .clothes-add-button {
   border: none;
+  font-family: "Cabinet Grotesk", Arial, sans-serif;
+  font-weight: 700;
+  line-height: 24.8px;
   color: rgba(0, 0, 0, 0.6);
   margin-left: 10px;
 }
@@ -17,4 +20,11 @@
   padding: 0;
   list-style-type: none;
   gap: 21px;
+}
+
+.clothes-section-title {
+  font-family: "Cabinet Grotesk", Arial, sans-serif;
+  font-weight: 700;
+  line-height: 24.8px;
+  color: rgba(0, 0, 0, 1);
 }

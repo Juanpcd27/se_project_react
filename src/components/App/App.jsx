@@ -108,6 +108,8 @@ function App() {
                 <Profile
                   onCardClick={handleCardClick}
                   clothingItems={clothingItems}
+                  openModal={openModal}
+                  closeModal={closeModal}
                 />
               }
             />
