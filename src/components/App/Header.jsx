@@ -4,7 +4,7 @@ import userlogo from "../../images/Userlogo.svg";
 import ToggleSwitch from "../ToggleSwitch/ToggleSwitch";
 import { Link } from "react-router-dom";
 
-function Header({ openModal, weatherData }) {
+function Header({ openItemModal, weatherData }) {
   const currentDate = new Date().toLocaleString("default", {
     month: "long",
     day: "numeric",
@@ -22,7 +22,7 @@ function Header({ openModal, weatherData }) {
         <button
           type="button"
           className="header__button-add"
-          onClick={openModal}
+          onClick={openItemModal}
         >
           + Add Clothes
         </button>

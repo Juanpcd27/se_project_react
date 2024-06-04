@@ -2,7 +2,7 @@ import "./ClothesSection.css";
 import { defaultClothingItems } from "../../utils/constants";
 import ItemCard from "../Main/ItemCard";
 
-function ClothesSection({ onCardClick, clothingItems, openModal }) {
+function ClothesSection({ onCardClick, clothingItems, openItemModal }) {
   return (
     <div className="clothes-section">
       <div className="clothes-info">
@@ -10,7 +10,7 @@ function ClothesSection({ onCardClick, clothingItems, openModal }) {
         <button
           className="clothes-add-button"
           type="button"
-          onClick={openModal}
+          onClick={openItemModal}
         >
           + Add new
         </button>

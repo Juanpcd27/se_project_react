@@ -5,7 +5,7 @@ import "./Profile.css";
 function Profile({
   onCardClick,
   clothingItems,
-  openModal,
+  openItemModal,
   closeModal,
   onAddItem,
 }) {
@@ -18,7 +18,7 @@ function Profile({
         <ClothesSection
           onCardClick={onCardClick}
           clothingItems={clothingItems}
-          openModal={openModal}
+          openItemModal={openItemModal}
           closeModal={closeModal}
           onAddItem={onAddItem}
         />

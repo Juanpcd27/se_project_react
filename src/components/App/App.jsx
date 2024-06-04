@@ -33,7 +33,7 @@ function App() {
     setSelectedCard(card);
   };
 
-  const openModal = () => {
+  const openItemModal = () => {
     setActiveModal("add-garment");
   };
 
@@ -90,7 +90,7 @@ function App() {
         value={{ currentTemperatureUnit, handleToggleSwitchChange }}
       >
         <div className="app__content">
-          <Header openModal={openModal} weatherData={weatherData} />
+          <Header openItemModal={openItemModal} weatherData={weatherData} />
           <Routes>
             <Route
               path="/"
@@ -108,7 +108,7 @@ function App() {
                 <Profile
                   onCardClick={handleCardClick}
                   clothingItems={clothingItems}
-                  openModal={openModal}
+                  openItemModal={openItemModal}
                   closeModal={closeModal}
                 />
               }
@@ -117,21 +117,19 @@ function App() {
 
           <Footer />
         </div>
-        {activeModal === "add-garment" && (
-          <AddItemModal
-            isOpen={activeModal === "add-garment"}
-            closeModal={closeModal}
-            onAddItem={addItemSubmit}
-          />
-        )}
-        {activeModal === "preview" && (
-          <ItemModal
-            isOpen={activeModal === "preview"}
-            card={selectedCard}
-            closeModal={closeModal}
-            handleDeleteCardClick={handleDeleteCardClick}
-          />
-        )}
+
+        <AddItemModal
+          isOpen={activeModal === "add-garment"}
+          closeModal={closeModal}
+          onAddItem={addItemSubmit}
+        />
+
+        <ItemModal
+          isOpen={activeModal === "preview"}
+          card={selectedCard}
+          closeModal={closeModal}
+          handleDeleteCardClick={handleDeleteCardClick}
+        />
       </CurrentTemperatureUnitContext.Provider>
     </div>
   );

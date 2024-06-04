@@ -18,6 +18,9 @@ function Main({ weatherData, handleCardClick, clothingItems }) {
     }
   }, [weatherData]);
 
+  // temp.C > 30
+
+  // && temp.C >= 19 && temp.C < 30
   return (
     <main className="main">
       <WeatherCard weatherData={temp} />
