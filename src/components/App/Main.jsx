@@ -6,7 +6,7 @@ import { useMemo, useContext } from "react";
 
 function Main({ weatherData, handleCardClick, clothingItems }) {
   const { currentTemperatureUnit } = useContext(CurrentTemperatureUnitContext);
-  const temp = weatherData?.weather?.temp?.[currentTemperatureUnit] || 999;
+  const temp = weatherData?.temp?.[currentTemperatureUnit] || 999;
 
   const weatherType = useMemo(() => {
     if (temp > 86) {
