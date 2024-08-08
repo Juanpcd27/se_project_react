@@ -8,11 +8,14 @@ function Profile({
   openItemModal,
   closeModal,
   onAddItem,
+  isLoggedIn,
+  handleLogout,
+  openEditModal,
 }) {
   return (
     <div className="profile">
       <section className="profile__sidebar">
-        <SideBar />
+        <SideBar handleLogout={handleLogout} openEditModal={openEditModal} />
       </section>
       <section className="profile__clothing-items">
         <ClothesSection
@@ -21,6 +24,7 @@ function Profile({
           openItemModal={openItemModal}
           closeModal={closeModal}
           onAddItem={onAddItem}
+          isLoggedIn={isLoggedIn}
         />
       </section>
     </div>

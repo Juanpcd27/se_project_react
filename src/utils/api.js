@@ -23,3 +23,48 @@ export function deleteCards(_id) {
     checkServerResponse
   );
 }
+
+export const getUserInfo = (jwt) => {
+  return fetch(`${baseUrl}/users/me`, {
+    method: "GET",
+    headers: {
+      Accept: "application/json",
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${jwt}`,
+    },
+  }).then(checkServerResponse);
+};
+
+export const editProfileInfo = (username, avatar, jwt) => {
+  return fetch(`${baseUrl}/users/me`, {
+    method: "PATCH",
+    headers: {
+      Accept: "application/json",
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${jwt}`,
+    },
+    body: JSON.stringify({ username, avatar }),
+  }).then(checkServerResponse);
+};
+
+export const addCardLike = (id, jwt) => {
+  return fetch(`${baseUrl}/items/${id}/likes`, {
+    method: "PUT",
+    headers: {
+      Accept: "application/json",
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${jwt}`,
+    },
+  }).then(checkServerResponse);
+};
+
+export const removeCardLike = (id, jwt) => {
+  return fetch(`${baseUrl}/items/${id}/likes`, {
+    method: "DELETE",
+    headers: {
+      Accept: "application/json",
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${jwt}`,
+    },
+  }).then(checkServerResponse);
+};

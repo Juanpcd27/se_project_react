@@ -24,6 +24,7 @@ const AddItemModal = ({ closeModal, isOpen, onAddItem }) => {
     e.preventDefault();
     onAddItem({ name, imageUrl, weather });
   };
+
   return (
     <ModalWithForm
       title="New garment"

@@ -1,6 +1,7 @@
 .switch {
   display: flex;
   position: relative;
+  right: 20px;
 }
 
 .switch__box {
@@ -8,8 +9,6 @@
   border: 2px solid black;
   width: 56px;
   height: 28px;
-  /* outline: none; */
-
   appearance: none;
 }
 
