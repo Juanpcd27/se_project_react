@@ -28,6 +28,7 @@
   font-weight: 700;
   line-height: 24px;
   color: rgba(0, 0, 0, 1);
+  background-color: transparent;
 }
 
 .header__user-container {

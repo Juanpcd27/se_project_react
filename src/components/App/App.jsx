@@ -115,9 +115,9 @@ function App() {
           .catch((err) => console.log(err));
   };
 
-  const handleRegistration = ({ username, email, password, avatar }) => {
+  const handleRegistration = ({ username, avatar, email, password }) => {
     auth
-      .userRegistration(username, password, email, avatar)
+      .userRegistration(username, avatar, email, password)
       .then(() => {
         openLoginModal();
       })
@@ -125,7 +125,7 @@ function App() {
   };
 
   const handleLogin = ({ email, password }) => {
-    if (!username || !password) {
+    if (!email || !password) {
       return;
     }
 
@@ -134,8 +134,8 @@ function App() {
       .then((data) => {
         if (data.jwt) {
           setToken(data.jwt);
-          setUserData(data.user);
           setIsLoggedIn(true);
+          setUserData(data.user);
           navigate("/profile");
         }
       })
@@ -236,18 +236,19 @@ function App() {
               <Route
                 path="/profile"
                 element={
-                  // <ProtectedRoute isLoggedIn={isLoggedIn}>
-                  <Profile
-                    onCardClick={handleCardClick}
-                    clothingItems={clothingItems}
-                    openItemModal={openItemModal}
-                    closeModal={closeModal}
-                    userData={userData}
-                    isLoggedIn={isLoggedIn}
-                    handleLogout={handleLogout}
-                    openEditModal={openEditModal}
-                  />
-                  // </ProtectedRoute>
+                  <ProtectedRoute isLoggedIn={isLoggedIn}>
+                    <Profile
+                      onCardClick={handleCardClick}
+                      clothingItems={clothingItems}
+                      openItemModal={openItemModal}
+                      closeModal={closeModal}
+                      userData={userData}
+                      isLoggedIn={isLoggedIn}
+                      handleLogout={handleLogout}
+                      openEditModal={openEditModal}
+                    />
+                    // //{" "}
+                  </ProtectedRoute>
                 }
               />
 
@@ -296,8 +297,7 @@ function App() {
             handleLogout={handleLogout}
           />
         </CurrentTemperatureUnitContext.Provider>
-      </div>
-      //{" "}
+      </div>{" "}
     </CurrentUserContext.Provider>
   );
 }
