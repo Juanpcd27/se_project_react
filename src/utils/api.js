@@ -8,11 +8,12 @@ export function getItems() {
   return fetch(`${baseUrl}/items`, { method: "GET" }).then(checkServerResponse);
 }
 
-export function addItems({ name, imageUrl, weather }) {
+export function addItems({ name, imageUrl, weather, token }) {
   return fetch(`${baseUrl}/items`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
+      Authorization: `Bearer ${token}`,
     },
     body: JSON.stringify({ name, imageUrl, weather }),
   }).then(checkServerResponse);
@@ -24,13 +25,13 @@ export function deleteCards(_id) {
   );
 }
 
-export const getUserInfo = (jwt) => {
+export const getUserInfo = (token) => {
   return fetch(`${baseUrl}/users/me`, {
     method: "GET",
     headers: {
       Accept: "application/json",
       "Content-Type": "application/json",
-      Authorization: `Bearer ${jwt}`,
+      Authorization: `Bearer ${token}`,
     },
   }).then(checkServerResponse);
 };
@@ -47,24 +48,24 @@ export const editProfileInfo = (username, avatar, token) => {
   }).then(checkServerResponse);
 };
 
-export const addCardLike = (id, jwt) => {
+export const addCardLike = ({ id, token }) => {
   return fetch(`${baseUrl}/items/${id}/likes`, {
     method: "PUT",
     headers: {
       Accept: "application/json",
       "Content-Type": "application/json",
-      Authorization: `Bearer ${jwt}`,
+      Authorization: `Bearer ${token}`,
     },
   }).then(checkServerResponse);
 };
 
-export const removeCardLike = (id, jwt) => {
+export const removeCardLike = ({ id, token }) => {
   return fetch(`${baseUrl}/items/${id}/likes`, {
     method: "DELETE",
     headers: {
       Accept: "application/json",
       "Content-Type": "application/json",
-      Authorization: `Bearer ${jwt}`,
+      Authorization: `Bearer ${token}`,
     },
   }).then(checkServerResponse);
 };

@@ -25,3 +25,20 @@
   border-radius: 19px;
   border-color: rgba(0, 0, 0, 0.3);
 }
+
+.card__like-button {
+  background-image: url(../../images/like.png);
+  position: absolute;
+  top: 20px;
+  right: 100px;
+  height: 18px;
+  width: 20px;
+  border: none;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.card__like-button-active {
+  background-image: url(../../images/liked.png);
+}

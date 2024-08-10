@@ -36,6 +36,7 @@ function Main({
                   handleDeleteCardClick={handleDeleteCardClick}
                   isLoggedIn={isLoggedIn}
                   onCardLike={handleCardLike}
+                  handleCardLike={handleCardLike}
                 />
               );
             })}

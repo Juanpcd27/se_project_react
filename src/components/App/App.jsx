@@ -96,17 +96,17 @@ function App() {
   };
 
   const handleCardLike = ({ id, isLiked }) => {
-    const jwt = localStorage.getItem("jwt");
+    const token = localStorage.getItem("jwt");
 
     !isLiked
-      ? addCardLike(id, jwt)
+      ? addCardLike({ id, token })
           .then((updatedCard) => {
             setClothingItems((cards) =>
               cards.map((item) => (item._id === id ? updatedCard : item))
             );
           })
           .catch((err) => console.log(err))
-      : removeCardLike(id, jwt)
+      : removeCardLike({ id, token })
           .then((updatedCard) => {
             setClothingItems((cards) =>
               cards.map((item) => (item._id === id ? updatedCard : item))
@@ -175,13 +175,13 @@ function App() {
   }, []);
 
   useEffect(() => {
-    const jwt = getToken();
+    const token = getToken();
 
-    if (!jwt) {
+    if (!token) {
       return;
     }
 
-    getUserInfo(jwt)
+    getUserInfo(token)
       .then(({ _id, username, email, avatar, name }) => {
         setIsLoggedIn(true);
         setUserData({ _id, username, email, avatar, name });
@@ -190,12 +190,13 @@ function App() {
       .catch(console.error);
   }, [isLoggedIn]);
 
-  const addItemSubmit = ({ name, imageUrl, weather, jwt }) => {
-    if (!jwt) {
+  const addItemSubmit = ({ name, imageUrl, weather }) => {
+    const token = getToken();
+    if (!token) {
       return;
     }
 
-    addItems({ name, imageUrl, weather, jwt })
+    addItems({ name, imageUrl, weather, token })
       .then((res) => {
         setClothingItems([res, ...clothingItems]);
         closeModal();
@@ -228,7 +229,7 @@ function App() {
                     handleDeleteCardClick={handleDeleteCardClick}
                     closeModal={closeModal}
                     isLoggedIn={isLoggedIn}
-                    onCardLike={handleCardLike}
+                    handleCardLike={handleCardLike}
                   />
                 }
               />
