@@ -12,7 +12,7 @@ function SideBar({ handleLogout, openEditModal }) {
           src={userData.avatar}
           alt="default avatar"
         />
-        <p className="sidebar__username">{userData.username}</p>
+        <p className="sidebar__username">{userData.name}</p>
       </div>
       <button
         type="button"

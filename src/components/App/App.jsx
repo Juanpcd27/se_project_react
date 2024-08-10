@@ -132,10 +132,9 @@ function App() {
     auth
       .userAuthorization(email, password)
       .then((data) => {
-        if (data.jwt) {
-          setToken(data.jwt);
+        if (data.token) {
+          setToken(data.token);
           setIsLoggedIn(true);
-          setUserData(data.user);
           navigate("/profile");
         }
       })
@@ -143,8 +142,8 @@ function App() {
   };
 
   const handleEditProfile = (username, avatar) => {
-    const jwt = getToken();
-    editProfileInfo({ username, avatar, jwt })
+    const token = getToken();
+    editProfileInfo({ username, avatar, token })
       .then((data) => {
         setUserData(data);
         closeModal();
