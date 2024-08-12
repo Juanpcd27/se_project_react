@@ -78,6 +78,12 @@ function App() {
     setActiveModal("editprofile");
   };
 
+  const escapeClose = () => {
+    if (keydown === "Escape") {
+      return closeModal();
+    }
+  };
+
   const handleDeleteCardClick = (card) => {
     deleteCards(selectedCard._id)
       .then(() => {
@@ -95,21 +101,21 @@ function App() {
     if (currentTemperatureUnit === "F") setCurrentTemperatureUnit("C");
   };
 
-  const handleCardLike = ({ id, isLiked }) => {
+  const handleCardLike = ({ _id, isLiked }) => {
     const token = localStorage.getItem("jwt");
 
     !isLiked
-      ? addCardLike({ id, token })
+      ? addCardLike({ _id, token })
           .then((updatedCard) => {
             setClothingItems((cards) =>
-              cards.map((item) => (item._id === id ? updatedCard : item))
+              cards.map((item) => (item._id === _id ? updatedCard : item))
             );
           })
           .catch((err) => console.log(err))
-      : removeCardLike({ id, token })
+      : removeCardLike({ _id, token })
           .then((updatedCard) => {
             setClothingItems((cards) =>
-              cards.map((item) => (item._id === id ? updatedCard : item))
+              cards.map((item) => (item._id === _id ? updatedCard : item))
             );
           })
           .catch((err) => console.log(err));

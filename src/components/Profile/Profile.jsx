@@ -11,6 +11,7 @@ function Profile({
   isLoggedIn,
   handleLogout,
   openEditModal,
+  handleCardLike,
 }) {
   return (
     <div className="profile">
@@ -25,6 +26,7 @@ function Profile({
           closeModal={closeModal}
           onAddItem={onAddItem}
           isLoggedIn={isLoggedIn}
+          handleCardLike={handleCardLike}
         />
       </section>
     </div>
