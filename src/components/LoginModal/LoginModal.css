@@ -1,0 +1,15 @@
+.header__button-add-sign {
+  display: flex;
+  border: none;
+  background-color: transparent;
+  width: 124px;
+  height: 36px;
+  margin-top: 20px;
+  font-size: 16px;
+  line-height: 20px;
+  align-items: center;
+  position: absolute;
+  margin-left: 125px;
+  margin-top: -35px;
+  color: rgba(0, 0, 0, 0.5);
+}

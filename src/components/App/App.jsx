@@ -78,14 +78,12 @@ function App() {
     setActiveModal("editprofile");
   };
 
-  const escapeClose = () => {
-    if (keydown === "Escape") {
-      return closeModal();
-    }
-  };
+  const handleDeleteCardClick = (selectedCard) => {
+    const token = getToken();
 
-  const handleDeleteCardClick = (card) => {
-    deleteCards(selectedCard._id)
+    if (!token) return;
+
+    deleteCards(selectedCard._id, token)
       .then(() => {
         const filteredCards = clothingItems.filter((card) => {
           return card._id !== selectedCard._id;
@@ -147,7 +145,7 @@ function App() {
       .catch(console.error);
   };
 
-  const handleEditProfile = (username, avatar) => {
+  const handleEditProfile = ({ username, avatar }) => {
     const token = getToken();
     editProfileInfo({ username, avatar, token })
       .then((data) => {
@@ -295,6 +293,7 @@ function App() {
             isOpen={activeModal === "login"}
             closeModal={closeModal}
             handleLogin={handleLogin}
+            openRegistrationModal={openRegistrationModal}
           />
           <EditProfileModal
             isOpen={activeModal === "editprofile"}

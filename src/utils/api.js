@@ -19,10 +19,14 @@ export function addItems({ name, imageUrl, weather, token }) {
   }).then(checkServerResponse);
 }
 
-export function deleteCards(_id) {
-  return fetch(`${baseUrl}/items/${_id}`, { method: "DELETE" }).then(
-    checkServerResponse
-  );
+export function deleteCards(_id, token) {
+  return fetch(`${baseUrl}/items/${_id}`, {
+    method: "DELETE",
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${token}`,
+    },
+  }).then(checkServerResponse);
 }
 
 export const getUserInfo = (token) => {
@@ -44,7 +48,7 @@ export const editProfileInfo = ({ username, avatar, token }) => {
       "Content-Type": "application/json",
       Authorization: `Bearer ${token}`,
     },
-    body: JSON.stringify(username, avatar),
+    body: JSON.stringify({ username, avatar }),
   }).then(checkServerResponse);
 };
 

@@ -1,8 +1,14 @@
 import { Link } from "react-router-dom";
 import React, { useState } from "react";
 import ModalWithForm from "../App/ModalWithForm";
+import "./LoginModal.css";
 
-const LoginModal = ({ closeModal, isOpen, handleLogin }) => {
+const LoginModal = ({
+  closeModal,
+  isOpen,
+  handleLogin,
+  openRegistrationModal,
+}) => {
   const [data, setData] = useState({
     email: "",
     password: "",
@@ -57,6 +63,14 @@ const LoginModal = ({ closeModal, isOpen, handleLogin }) => {
           onChange={handleChange}
         />
       </label>
+
+      <button
+        type="button"
+        className="header__button-add-sign"
+        onClick={openRegistrationModal}
+      >
+        or Sign up
+      </button>
     </ModalWithForm>
   );
 };
