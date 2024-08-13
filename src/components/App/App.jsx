@@ -78,7 +78,7 @@ function App() {
     setActiveModal("editprofile");
   };
 
-  const handleDeleteCardClick = (selectedCard) => {
+  const handleDeleteCardClick = () => {
     const token = getToken();
 
     if (!token) return;
