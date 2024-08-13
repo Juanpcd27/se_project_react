@@ -5,12 +5,14 @@ import React, { useContext, useState } from "react";
 function ItemCard({ item, onCardClick, handleCardLike, isLoggedIn }) {
   const { userData } = React.useContext(CurrentUserContext);
 
-  const handleCardClick = () => {
+  const handleCardClick = (e) => {
+    e.preventDefault();
     onCardClick(item);
   };
 
-  const handleLike = () => {
-    handleCardLike(item);
+  const handleLike = (e) => {
+    e.preventDefault();
+    handleCardLike(item, isLiked);
   };
 
   const isLiked = item.likes.some((id) => id === userData._id);

@@ -250,6 +250,7 @@ function App() {
                       isLoggedIn={isLoggedIn}
                       handleLogout={handleLogout}
                       openEditModal={openEditModal}
+                      handleCardLike={handleCardLike}
                     />
                     // //{" "}
                   </ProtectedRoute>

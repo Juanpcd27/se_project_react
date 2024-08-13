@@ -48,7 +48,7 @@ export const editProfileInfo = ({ username, avatar, token }) => {
       "Content-Type": "application/json",
       Authorization: `Bearer ${token}`,
     },
-    body: JSON.stringify({ username, avatar }),
+    body: JSON.stringify({ name: username, avatar }),
   }).then(checkServerResponse);
 };
 
