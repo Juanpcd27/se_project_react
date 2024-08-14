@@ -35,9 +35,6 @@
   margin-bottom: 15px;
 }
 
-.modal__footer {
-}
-
 .modal__info {
   display: flex;
   justify-content: space-between;

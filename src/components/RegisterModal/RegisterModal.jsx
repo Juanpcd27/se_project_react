@@ -66,7 +66,7 @@ const RegisterModal = ({ closeModal, isOpen, handleRegistration }) => {
           type="text"
           name="username"
           placeholder="Name"
-          id="username"
+          id="username-register"
           required
           value={data.username}
           onChange={handleChange}
@@ -80,7 +80,7 @@ const RegisterModal = ({ closeModal, isOpen, handleRegistration }) => {
           type="text"
           name="avatar"
           placeholder="Avatar URL"
-          id="avatar"
+          id="avatar-register"
           required
           value={data.avatar}
           onChange={handleChange}

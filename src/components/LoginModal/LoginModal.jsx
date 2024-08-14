@@ -43,7 +43,7 @@ const LoginModal = ({
           type="email"
           name="email"
           placeholder="Email"
-          id="email"
+          id="email-login"
           required
           value={data.email}
           onChange={handleChange}
@@ -57,7 +57,7 @@ const LoginModal = ({
           type="password"
           name="password"
           placeholder="Password"
-          id="password"
+          id="password-login"
           required
           value={data.password}
           onChange={handleChange}
