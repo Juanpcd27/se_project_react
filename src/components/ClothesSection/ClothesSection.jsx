@@ -33,17 +33,18 @@ function ClothesSection({
         )}
       </div>
       <ul className="clothes-section__items">
-        {clothingItems.map((item) => {
-          return (
-            <ItemCard
-              key={item._id}
-              item={item}
-              onCardClick={onCardClick}
-              handleCardLike={handleCardLike}
-              isLoggedIn={isLoggedIn}
-            />
-          );
-        })}
+        {clothingItems.map(
+          (item) =>
+            item.owner === currentUser.userData._id && (
+              <ItemCard
+                key={item._id}
+                item={item}
+                onCardClick={onCardClick}
+                handleCardLike={handleCardLike}
+                isLoggedIn={isLoggedIn}
+              />
+            )
+        )}
       </ul>
     </div>
   );

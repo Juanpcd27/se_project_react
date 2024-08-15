@@ -288,6 +288,7 @@ function App() {
             isOpen={activeModal === "register"}
             closeModal={closeModal}
             handleRegistration={handleRegistration}
+            openLoginModal={openLoginModal}
           />
           <LoginModal
             isOpen={activeModal === "login"}

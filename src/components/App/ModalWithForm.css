@@ -22,11 +22,11 @@
 .modal__container {
   background-color: white;
   max-width: 496px;
-  /* height: 436px; */
   border-radius: 20px;
   padding: 20px;
   box-sizing: border-box;
   width: 100%;
+  padding-bottom: 35px;
 }
 
 .modal__close {

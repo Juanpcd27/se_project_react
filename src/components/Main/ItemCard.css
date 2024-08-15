@@ -25,6 +25,7 @@
   border-radius: 19px;
   border-color: rgba(0, 0, 0, 0.3);
   max-width: 325px;
+  height: 328px;
 }
 
 .card__like-button {

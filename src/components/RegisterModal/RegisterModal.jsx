@@ -1,7 +1,12 @@
 import React, { useState } from "react";
 import ModalWithForm from "../App/ModalWithForm";
 
-const RegisterModal = ({ closeModal, isOpen, handleRegistration }) => {
+const RegisterModal = ({
+  closeModal,
+  isOpen,
+  handleRegistration,
+  openLoginModal,
+}) => {
   const [data, setData] = useState({
     username: "",
     email: "",
@@ -31,14 +36,14 @@ const RegisterModal = ({ closeModal, isOpen, handleRegistration }) => {
       closeModal={closeModal}
       onSubmit={onRegistration}
     >
-      <label htmlFor="name" className="modal__label">
+      <label htmlFor="email-register" className="modal__label">
         <h3 className="modal__label-title">Email</h3>
         <input
           className="modal__input modal__input-name"
           type="email"
           name="email"
           placeholder="Email"
-          id="email"
+          id="email-register"
           required
           value={data.email}
           onChange={handleChange}
@@ -59,7 +64,7 @@ const RegisterModal = ({ closeModal, isOpen, handleRegistration }) => {
         />
       </label>
 
-      <label htmlFor="name" className="modal__label">
+      <label htmlFor="username-register" className="modal__label">
         <h3 className="modal__label-title">Name</h3>
         <input
           className="modal__input modal__input-name"
@@ -72,7 +77,7 @@ const RegisterModal = ({ closeModal, isOpen, handleRegistration }) => {
           onChange={handleChange}
         ></input>
       </label>
-      <label htmlFor="avatar" className="modal__label">
+      <label htmlFor="avatar-register" className="modal__label">
         <h3 className="modal__label-title">Avatar URL</h3>
 
         <input
@@ -86,6 +91,14 @@ const RegisterModal = ({ closeModal, isOpen, handleRegistration }) => {
           onChange={handleChange}
         />
       </label>
+
+      <button
+        type="button"
+        className="header__button-add-sign"
+        onClick={openLoginModal}
+      >
+        or Log In
+      </button>
     </ModalWithForm>
   );
 };
