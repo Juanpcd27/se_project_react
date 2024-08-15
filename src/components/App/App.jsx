@@ -99,7 +99,7 @@ function App() {
     if (currentTemperatureUnit === "F") setCurrentTemperatureUnit("C");
   };
 
-  const handleCardLike = ({ _id, isLiked }) => {
+  const handleCardLike = ({ _id }, isLiked) => {
     const token = localStorage.getItem("jwt");
 
     !isLiked
@@ -246,7 +246,6 @@ function App() {
                       clothingItems={clothingItems}
                       openItemModal={openItemModal}
                       closeModal={closeModal}
-                      userData={userData}
                       isLoggedIn={isLoggedIn}
                       handleLogout={handleLogout}
                       openEditModal={openEditModal}

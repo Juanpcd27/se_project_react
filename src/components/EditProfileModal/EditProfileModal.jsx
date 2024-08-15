@@ -18,7 +18,6 @@ export const EditProfileModal = ({ isOpen, closeModal, handleEditProfile }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     handleEditProfile(data);
-    closeModal();
   };
   return (
     <ModalWithForm
@@ -28,7 +27,7 @@ export const EditProfileModal = ({ isOpen, closeModal, handleEditProfile }) => {
       closeModal={closeModal}
       onSubmit={handleSubmit}
     >
-      <label htmlFor="name" className="modal__label">
+      <label htmlFor="username" className="modal__label">
         <h3 className="modal__label-title">Name *</h3>
         <input
           className="modal__input modal__input-name"

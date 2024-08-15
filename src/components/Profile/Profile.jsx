@@ -1,6 +1,8 @@
 import ClothesSection from "../ClothesSection/ClothesSection";
 import SideBar from "../SideBar/SideBar";
 import "./Profile.css";
+import React, { useContext } from "react";
+import { CurrentUserContext } from "../../contexts/CurrentUserContext";
 
 function Profile({
   onCardClick,
@@ -13,6 +15,10 @@ function Profile({
   openEditModal,
   handleCardLike,
 }) {
+  const currentUser = useContext(CurrentUserContext);
+
+  const isOwn = clothingItems.owner === currentUser._id;
+
   return (
     <div className="profile">
       <section className="profile__sidebar">
