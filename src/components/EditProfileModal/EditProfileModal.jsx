@@ -22,7 +22,7 @@ export const EditProfileModal = ({ isOpen, closeModal, handleEditProfile }) => {
     if (userData) {
       setData({ username: userData.name, avatar: userData.avatar });
     }
-  }, userData);
+  }, [isOpen]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
