@@ -20,9 +20,9 @@ export const EditProfileModal = ({ isOpen, closeModal, handleEditProfile }) => {
 
   useEffect(() => {
     if (userData) {
-      setData(userData);
+      setData({ username: userData.name, avatar: userData.avatar });
     }
-  }, []);
+  }, userData);
 
   const handleSubmit = (e) => {
     e.preventDefault();
