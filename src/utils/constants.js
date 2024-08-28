@@ -93,3 +93,8 @@ export const coordinates = {
 };
 
 export const APIkey = "3b01acf58b70d6eb0ca05df5df4470d2";
+
+export const baseUrl =
+  process.env.NODE_ENV === "production"
+    ? "https://api.wtwr-project.home.kg"
+    : "http://localhost:3001";

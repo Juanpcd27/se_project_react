@@ -1,4 +1,4 @@
-const baseUrl = "http://localhost:3001";
+import { baseUrl } from "./constants";
 import { checkServerResponse } from "./api";
 
 export function userRegistration(username, avatar, email, password) {

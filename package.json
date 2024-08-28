@@ -1,16 +1,16 @@
 {
-  "homepage": "https://Juanpcd27.github.io/se_project_react/",
   "name": "se_project_react",
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://wtwr-project.home.kg",
   "scripts": {
     "dev": "vite --open",
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "deploy": "npm run build && scp -r ./dist/* juanpablocarriondiaz@104.198.52.46:/home/juanpablocarriondiaz/frontend"
   },
   "dependencies": {
     "mongoose": "^8.4.1",
