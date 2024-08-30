@@ -251,7 +251,6 @@ function App() {
                       openEditModal={openEditModal}
                       handleCardLike={handleCardLike}
                     />
-                    // //{" "}
                   </ProtectedRoute>
                 }
               />
@@ -267,7 +266,6 @@ function App() {
                 }
               />
             </Routes>
-
             <Footer />
           </div>
 
@@ -303,7 +301,7 @@ function App() {
             handleLogout={handleLogout}
           />
         </CurrentTemperatureUnitContext.Provider>
-      </div>{" "}
+      </div>
     </CurrentUserContext.Provider>
   );
 }
