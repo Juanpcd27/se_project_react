@@ -18,6 +18,9 @@ My project is named WTWR, This is the frontend from the full stack project.
 
 * This project is designed in a responsive way, meaning it can be accessed in any resolution.
 
+* Project is deployed with google cloud computing VM instances, and the Domain name is: https://www.wtwr-project.home.kg/
+
+
 --- Technologies and skills used:
 
 - HTML
@@ -28,5 +31,6 @@ My project is named WTWR, This is the frontend from the full stack project.
 - Git
 - JSON
 - Webpack
+- Google Cloud Computing VM Instances
 
 
